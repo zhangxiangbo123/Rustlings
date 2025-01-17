@@ -1,11 +1,15 @@
-// variables3.rs
-//
-// Execute `rustlings hint variables3` or use the `hint` watch subcommand for a
-// hint.
-
-// I AM NOT DONE
+#![allow(clippy::needless_late_init)]
 
 fn main() {
-    let x: i32;
-    println!("Number {}", x);
+    // Reading uninitialized variables isn't allowed in Rust!
+    // Therefore, we need to assign a value first.
+    let x: i32 = 42;
+
+    println!("Number {x}");
+
+    // It is possible to declare a variable and initialize it later.
+    // But it can't be used before initialization.
+    let y: i32;
+    y = 42;
+    println!("Number {y}");
 }

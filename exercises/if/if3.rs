@@ -1,22 +1,18 @@
-// if3.rs
-//
-// Execute `rustlings hint if3` or use the `hint` watch subcommand for a hint.
-
-// I AM NOT DONE
-
-pub fn animal_habitat(animal: &str) -> &'static str {
+fn animal_habitat(animal: &str) -> &str {
     let identifier = if animal == "crab" {
         1
     } else if animal == "gopher" {
-        2.0
+        2
     } else if animal == "snake" {
         3
     } else {
-        "Unknown"
+        // Any unused identifier.
+        4
     };
 
-    // DO NOT CHANGE THIS STATEMENT BELOW
-    let habitat = if identifier == 1 {
+    // Instead of such an identifier, you would use an enum in Rust.
+    // But we didn't get into enums yet.
+    if identifier == 1 {
         "Beach"
     } else if identifier == 2 {
         "Burrow"
@@ -24,9 +20,11 @@ pub fn animal_habitat(animal: &str) -> &'static str {
         "Desert"
     } else {
         "Unknown"
-    };
+    }
+}
 
-    habitat
+fn main() {
+    // You can optionally experiment here.
 }
 
 #[cfg(test)]

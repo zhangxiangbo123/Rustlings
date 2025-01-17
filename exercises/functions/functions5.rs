@@ -1,15 +1,9 @@
-// functions5.rs
-//
-// Execute `rustlings hint functions5` or use the `hint` watch subcommand for a
-// hint.
-
-// I AM NOT DONE
+fn square(num: i32) -> i32 {
+    // Removed the semicolon `;` at the end of the line below to implicitly return the result.
+    num * num
+}
 
 fn main() {
     let answer = square(3);
-    println!("The square of 3 is {}", answer);
-}
-
-fn square(num: i32) -> i32 {
-    num * num;
+    println!("The square of 3 is {answer}");
 }
